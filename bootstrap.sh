@@ -37,14 +37,14 @@ service jenkins start
 jenkins -version      
 sudo service jenkins status
 #                       
-#chmod a+x jira.bin     
-# sudo ./jira.bin << EOF
-#o                      
-#1
-#2
-#8081
-#8006
-#i
-#EOF
-# 
+chmod a+x jira.bin     
+ sudo ./jira.bin << EOF
+o                      
+1
+2
+8081
+8006
+i
+EOF
+ 
 echo "Finished installing"
