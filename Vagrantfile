@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "AZIM.qac.local"
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "centos/7"
+  config.vm.box = "chad-thompson/ubuntu-trusty64-gui"
 				   
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
   #
    config.vm.provider :virtualbox do |master|
   	master.gui = true
-	master.name = "Centos7 Server"
+	master.name = "Azim Server"
 	master.memory = 4096
 	master.cpus = 2
    end  
@@ -67,7 +67,6 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "shared", "/opt"
-  config.vm.synced_folder "shared", "/vagrant", type: "virtualbox"
+   config.vm.synced_folder "shared", "/opt"
   
 end
